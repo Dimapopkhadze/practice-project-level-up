@@ -7,35 +7,13 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { useState } from "react";
-import { TabStyled, TabsStyled } from "../Styles/MainDialogStyles";
+import { TabStyled, TabsStyled, BoxStyled } from "../Styles/MainDialogStyles";
+import FirstPanel from "./PanelComponents/FirstPanel";
 
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
-}
-
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-    </div>
-  );
-}
-
-function a11yProps(index: number) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
 }
 
 const Main = () => {
@@ -47,8 +25,8 @@ const Main = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <>
-      <h1>მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი</h1>
+    <BoxStyled>
+      <h3>მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი</h3>
       <p>მოხვდი პოკერის ფესტივალზე მალტაში</p>
       <TabsStyled
         value={value}
@@ -64,12 +42,12 @@ const Main = () => {
             <>
               {isMobile ? (
                 <>
-                  <Typography variant="h6">28 ოქტ. - 7 ნოემ.</Typography>
+                  <Typography>28 ოქტ. - 7 ნოემ.</Typography>
                   <Typography variant="h5">Cash Games</Typography>
                 </>
               ) : (
                 <>
-                  <Typography variant="h6">1-29 აპრილი</Typography>
+                  <Typography>1-29 აპრილი</Typography>
                   <Typography variant="h5">Cash Games</Typography>
                 </>
               )}
@@ -82,12 +60,12 @@ const Main = () => {
             <>
               {isMobile ? (
                 <>
-                  <Typography variant="h6">10 - 29 დეკ.</Typography>
+                  <Typography>10 - 29 დეკ.</Typography>
                   <Typography variant="h5">New Year Series</Typography>
                 </>
               ) : (
                 <>
-                  <Typography variant="h6">13-29 აპრილი</Typography>
+                  <Typography>13-29 აპრილი</Typography>
                   <Typography variant="h5">Spring Series</Typography>
                 </>
               )}
@@ -100,12 +78,12 @@ const Main = () => {
             <>
               {isMobile ? (
                 <>
-                  <Typography variant="h6">28 ოქტ. - 7 ნოემ.</Typography>
+                  <Typography>28 ოქტ. - 7 ნოემ.</Typography>
                   <Typography variant="h5">Final Stage</Typography>
                 </>
               ) : (
                 <>
-                  <Typography variant="h6">30 აპრილი</Typography>
+                  <Typography>30 აპრილი</Typography>
                   <Typography variant="h5">Final Stage</Typography>
                 </>
               )}
@@ -115,7 +93,7 @@ const Main = () => {
         />
       </TabsStyled>
       <TabPanel value={value} index={0}>
-        <div>dima</div>
+        <FirstPanel />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <div>dima</div>
@@ -123,7 +101,30 @@ const Main = () => {
       <TabPanel value={value} index={2}>
         <div>dima</div>
       </TabPanel>
-    </>
+    </BoxStyled>
   );
 };
 export default Main;
+
+function TabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && <>{children}</>}
+    </div>
+  );
+}
+
+function a11yProps(index: number) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
