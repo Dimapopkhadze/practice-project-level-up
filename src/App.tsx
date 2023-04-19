@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Dialog, useMediaQuery, useTheme, Paper, Box } from "@mui/material";
+import "./App.css";
+import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
+import Footer from "./Components/Footer/Footer";
+import {
+  DialogStyled,
+  PaperStyled,
+} from "./Components/Styles/MainDialogStyles";
 
-function App() {
+const App = () => {
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <DialogStyled
+        open={true}
+        fullScreen={fullScreen}
+        fullWidth
+        maxWidth={"lg"}
+      >
+        <PaperStyled>
+          <Header></Header>
+          <Main></Main>
+          <Footer></Footer>
+        </PaperStyled>
+      </DialogStyled>
+    </main>
   );
-}
+};
 
 export default App;
