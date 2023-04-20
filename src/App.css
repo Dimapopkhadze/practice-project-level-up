@@ -1,0 +1,22 @@
+/* Set the width and height of the scrollbar */
+.element-with-scrollbar {
+    max-height: 200px;
+    overflow-y: auto; /* Show the scrollbar only when needed */
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* Track styles */
+  ::-webkit-scrollbar-track {
+    background:#2c3234;
+  }
+  
+  /* Handle styles */
+  ::-webkit-scrollbar-thumb {
+    background: #ef5a21;
+    border-radius: 10px;
+  
+  }
+
+  
+  /* Handle hover styles */

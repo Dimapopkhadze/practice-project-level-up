@@ -17,7 +17,7 @@ interface TabPanelProps {
 }
 
 const Main = () => {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState(0);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };

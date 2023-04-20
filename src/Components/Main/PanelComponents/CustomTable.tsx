@@ -1,11 +1,4 @@
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-} from "@mui/material";
+import { TableBody, TableHead, TableRow, TableContainer } from "@mui/material";
 import {
   TableBodyCellStyled,
   TableHeadCellStyled,
@@ -24,24 +17,34 @@ type leaderboardData = {
 
 const CustomTable = ({ rows }: propsData) => {
   return (
-    <TableStyled stickyHeader>
-      <TableHead>
-        <TableRow>
-          <TableHeadCellStyled>ადგილი</TableHeadCellStyled>
-          <TableHeadCellStyled>ვაუჩერი</TableHeadCellStyled>
-          <TableHeadCellStyled>პრიზი</TableHeadCellStyled>
-        </TableRow>
-      </TableHead>
-      <TableBody sx={{ background: "#25292b" }}>
-        {rows.map((row) => (
-          <TableRowStyled>
-            <TableBodyCellStyled>{row.number}</TableBodyCellStyled>
-            <TableBodyCellStyled>{row.voucher}</TableBodyCellStyled>
-            <TableBodyCellStyled>{row.prize}</TableBodyCellStyled>
-          </TableRowStyled>
-        ))}
-      </TableBody>
-    </TableStyled>
+    <TableContainer sx={{ maxHeight: 470 }}>
+      <TableStyled stickyHeader>
+        <TableHead>
+          <TableRow>
+            <TableHeadCellStyled style={{ textAlign: "left" }}>
+              ადგილი
+            </TableHeadCellStyled>
+            <TableHeadCellStyled>ვაუჩერი</TableHeadCellStyled>
+            <TableHeadCellStyled style={{ textAlign: "right" }}>
+              პრიზი
+            </TableHeadCellStyled>
+          </TableRow>
+        </TableHead>
+        <TableBody sx={{ background: "#25292b" }}>
+          {rows.map((row) => (
+            <TableRowStyled>
+              <TableBodyCellStyled className="left">
+                <div> {row.number}</div>
+              </TableBodyCellStyled>
+              <TableBodyCellStyled>{row.voucher}</TableBodyCellStyled>
+              <TableBodyCellStyled className="right">
+                {row.prize}
+              </TableBodyCellStyled>
+            </TableRowStyled>
+          ))}
+        </TableBody>
+      </TableStyled>
+    </TableContainer>
   );
 };
 export default CustomTable;
