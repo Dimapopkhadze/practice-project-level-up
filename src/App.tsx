@@ -17,7 +17,7 @@ const App = () => {
         open={true}
         fullScreen={fullScreen}
         fullWidth
-        maxWidth={"lg"}
+        maxWidth={"md"}
       >
         <PaperStyled>
           <Header></Header>

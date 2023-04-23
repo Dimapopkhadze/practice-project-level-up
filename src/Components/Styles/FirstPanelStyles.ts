@@ -41,9 +41,7 @@ export const PanelContainer = styled(Paper)`
   .title-with-icon {
     display: flex;
     justify-content: center;
-    h3 {
-      padding-right: 15px;
-    }
+    gap: 15px;
   }
   .link {
     color: #ef5a21;
@@ -78,17 +76,17 @@ export const StyledDiv = styled("div")`
   background: #202324;
   color: white;
   border-radius: 15px;
-  padding: 25px;
+  padding: 10px;
   width: 90%;
+  text-align: start;
 
   div {
     display: flex;
     padding: 0 10px;
-    gap: 5px;
+    gap: 15px;
   }
   @media (max-width: 600px) {
-    padding: 20px 0px;
+    padding: 10px 0px;
     font-size: 13px;
-    text-align: start;
   }
 `;

@@ -1,4 +1,122 @@
+import {
+  AccordionDetails,
+  AccordionSummary,
+  Typography,
+  Box,
+} from "@mui/material";
+import {
+  AccordionStyled,
+  FooterContainer,
+  StyledDiv,
+} from "../Styles/FooterStyles";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import CustomSlider from "./CustomSlider";
+
 const Footer = () => {
-  return <></>;
+  const settings = {
+    dots: false,
+    infinite: false,
+    arrows: false,
+    autoplay: true,
+    speed: 1000,
+    swipeToSlide: true,
+    autoplaySpeed: 5000,
+    slidesToShow: 3,
+    pauseOnHover: true,
+    centerMode: true,
+    centerPadding: "40px",
+
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: "15px",
+        },
+      },
+    ],
+  };
+  const slides = [
+    {
+      img: "promo-1.png",
+      id: 1,
+    },
+    {
+      img: "promo-2.png",
+      id: 2,
+    },
+    { img: "promo-3.png", id: 3 },
+    {
+      img: "promo-4.png",
+      id: 4,
+    },
+    {
+      img: "promo-1.png",
+      id: 5,
+    },
+    {
+      img: "promo-2.png",
+      id: 6,
+    },
+  ];
+  return (
+    <FooterContainer>
+      <Box sx={{ marginBottom: "60px" }}>
+        <h3>წესები და პირობები</h3>
+        <AccordionStyled>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>
+              როდის იწყება და რა ფორმატით გაიმართება აქცია
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </Typography>
+          </AccordionDetails>
+        </AccordionStyled>
+        <AccordionStyled>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>როგორ მივიღო აქციაში მონაწილეობა?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </Typography>
+          </AccordionDetails>
+        </AccordionStyled>
+        <AccordionStyled>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>სხვადასხვა</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </Typography>
+          </AccordionDetails>
+        </AccordionStyled>
+      </Box>
+
+      <CustomSlider settings={settings} slides={slides} />
+    </FooterContainer>
+  );
 };
 export default Footer;

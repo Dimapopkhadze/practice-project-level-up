@@ -4,10 +4,10 @@ import {
   PanelComponent,
   PaperStyled,
   StyledDiv,
-} from "../../Styles/PanelStyles";
+} from "../../Styles/FirstPanelStyles";
 
 import CustomTable from "./CustomTable";
-import { PanelLayout } from "../../Styles/PanelStyles";
+import { PanelLayout } from "../../Styles/FirstPanelStyles";
 type leaderboardData = {
   number: number;
   voucher: string;
@@ -125,7 +125,7 @@ const FirstPanel = () => {
             ლიდერბორდი
           </h3>
           <p>
-            *Side ლიდერბორდების შესახებ დეტალური ინფორმაცია იხილეთ პოკერის
+            * Side ლიდერბორდების შესახებ დეტალური ინფორმაცია იხილეთ პოკერის
             ლობიში
           </p>
         </div>

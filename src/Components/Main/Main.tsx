@@ -9,6 +9,7 @@ import {
 import { useState } from "react";
 import { TabStyled, TabsStyled, BoxStyled } from "../Styles/MainDialogStyles";
 import FirstPanel from "./PanelComponents/FirstPanel";
+import SecondPanel from "./PanelComponents/SecondPanel";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -96,7 +97,7 @@ const Main = () => {
         <FirstPanel />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div>dima</div>
+        <SecondPanel />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <div>dima</div>
