@@ -19,47 +19,10 @@ export const PanelLayout = styled("div")`
     border-bottom-right-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(239, 90, 33, 0.4);
   }
-`;
-
-export const PanelComponent = styled(Paper)`
-  background: #2c3234;
-  border-radius: 15px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-bottom: 20px;
-
-  .second-component {
-    padding: 10px 35px;
-  }
-`;
-
-export const SecondPanelComponent = styled(Paper)`
-  background: #171718;
-  border-radius: 15px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-bottom: 20px;
   .span {
     margin: 20px 5px;
     font-size: 14px;
   }
-  @media (max-width: 600px) {
-    h3 {
-      font-size: 15px;
-    }
-  
-`;
-export const PanelContainer = styled(Paper)`
-  color: white;
-  background: #171718;
-  border-radius: 15px;
-  margin: 3px 3px;
-  display: flex;
-  flex-direction: column;
 
   .title-with-icon {
     display: flex;
@@ -87,51 +50,39 @@ export const PanelContainer = styled(Paper)`
     color: #ef5a21;
     text-decoration: underline;
   }
-`;
-
-export const FlexContainer = styled("div")`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-`;
-export const FlexComponent = styled("div")`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  span {
-    margin-bottom: 10px;
-    font-size: 12px;
-  }
-}
-`;
-export const FlexBox = styled("div")`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 16px;
   .row {
+    width:100%;
     flex-direction: row;
+    overflow:hidden;
+
+    white-space:nowrap;
+
+
+  
   }
   .background-1 {
-    width: 395px;
+    
+  width:100%;
     height: 104px;
     background-image: url("/img/tournament-bg.png");
+    background-repeat:no-repeat;
   }
   .background-2 {
-    width: 395px;
+    width:100%;
     height: 104px;
+    background-repeat:no-repeat;
     background-image: url("/img/tournament-bg2.png");
   }
   .background-3 {
-    width: 806px;
+    width: 100%;
     height: 104px;
     background-image: url("/img/main-bg.png");
   }
   .small {
     width: 65%;
+
     justify-content: space-between;
+ 
   }
   .big {
     width: 35%;
@@ -158,6 +109,24 @@ export const FlexBox = styled("div")`
     font-weight: bold;
     font-size: 24px;
   }
+  .border-left {
+    position: relative;
+  }
+  .border-left::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 25%;
+    bottom: 0;
+    width: 5px;
+    height: 50%;
+    background-color: #ef5a21;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(239, 90, 33, 0.4);
+  }
+   
   @media (max-width: 600px) {
     .background-1-m {
       width: 343px;
@@ -183,6 +152,67 @@ export const FlexBox = styled("div")`
       }
     }
   }
+`;
+export const PanelComponent = styled(Paper)`
+  background: #2c3234;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+
+  .second-component {
+    padding: 10px 35px;
+  }
+`;
+
+export const SecondPanelComponent = styled(Paper)`
+  background: #171718;
+  border: 4px solid #25292b;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+`;
+export const PanelContainer = styled(Paper)`
+  color: white;
+  background: #171718;
+  border-radius: 15px;
+  margin: 3px 3px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 600px) {
+    h3 {
+      font-size: 15px;
+    }
+`;
+
+export const FlexContainer = styled("div")`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
+export const FlexComponent = styled("div")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  span {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+}
+`;
+export const FlexBox = styled("div")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
 `;
 export const Time = styled("div")`
   display: flex;
@@ -211,24 +241,6 @@ export const PaperStyled = styled(Paper)`
   background: #25292b;
   margin: 0px 10px 30px;
   color: #717171;
-
-  .border-left {
-    position: relative;
-  }
-  .border-left::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 25%;
-    bottom: 0;
-    width: 5px;
-    height: 50%;
-    background-color: #ef5a21;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0 0 10px 5px rgba(239, 90, 33, 0.4);
-  }
 `;
 
 export const StyledDiv = styled("div")`

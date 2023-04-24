@@ -5,26 +5,21 @@ import {
   PaperStyled,
   StyledDiv,
 } from "../../Styles/FirstPanelStyles";
-
-import CustomTable from "./CustomTable";
 import { PanelLayout } from "../../Styles/FirstPanelStyles";
-type leaderboardData = {
-  number: number;
-  voucher: string;
-  prize: string;
-};
+import CustomTableRow from "./CustomTableRow";
 
 const FirstPanel = () => {
-  const leaderboard: leaderboardData[] = [
-    { number: 1, voucher: "-", prize: "aasd" },
-    { number: 2, voucher: "-", prize: "aasd" },
-    { number: 3, voucher: "-", prize: "aaadlkasjdlkasjdlka" },
-    { number: 4, voucher: "-", prize: "aaadlkasjdlkasjdlka" },
-    { number: 5, voucher: "-", prize: "aaadlkasjdlkasjdlka" },
-    { number: 6, voucher: "-", prize: "aaadlkasjdlkasjdlka" },
-    { number: 7, voucher: "-", prize: "aaadlkasjdlkasjdlka" },
-    { number: 8, voucher: "-", prize: "aaadlkasjdlkasjdlka" },
-    { number: 9, voucher: "-", prize: "aaadlkasjdlkasjdlka" },
+  const leaderboard = [
+    { number: 1, voucher: "-", text: "aasd" },
+    { number: 2, voucher: "-", text: "aasd" },
+
+    { number: 3, voucher: "-", text: "aaadlkasjdlkasjdlka" },
+    { number: 4, voucher: "-", text: "aaadlkasjdlkasjdlka" },
+    { number: 5, voucher: "-", text: "aaadlkasjdlkasjdlka" },
+    { number: 6, voucher: "-", text: "aaadlkasjdlkasjdlka" },
+    { number: 7, voucher: "-", text: "aaadlkasjdlkasjdlka" },
+    { number: 8, voucher: "-", text: "aaadlkasjdlkasjdlka" },
+    { number: 9, voucher: "-", text: "aaadlkasjdlkasjdlka" },
   ];
   return (
     <PanelLayout>
@@ -36,7 +31,7 @@ const FirstPanel = () => {
             <img src="/img/example-icon.png" alt="example-icon"></img>
           </div>
           <PaperStyled>
-            <CustomTable rows={leaderboard}></CustomTable>
+            <CustomTableRow leaderboard={leaderboard}></CustomTableRow>
           </PaperStyled>
           <PaperStyled>
             <Stack
@@ -76,7 +71,7 @@ const FirstPanel = () => {
             <img src="/img/example-icon.png" alt="example-icon"></img>
           </div>
           <PaperStyled>
-            <CustomTable rows={leaderboard}></CustomTable>
+            <CustomTableRow leaderboard={leaderboard}></CustomTableRow>
           </PaperStyled>
           <PaperStyled>
             <Stack

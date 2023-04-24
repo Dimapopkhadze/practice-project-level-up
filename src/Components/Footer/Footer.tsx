@@ -15,23 +15,21 @@ import CustomSlider from "./CustomSlider";
 const Footer = () => {
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     arrows: false,
     autoplay: true,
-    speed: 1000,
+    speed: 500,
     swipeToSlide: true,
     autoplaySpeed: 5000,
-    slidesToShow: 3,
+    slidesToShow: 3.1,
+
     pauseOnHover: true,
-    centerMode: true,
-    centerPadding: "40px",
 
     responsive: [
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          centerPadding: "15px",
+          slidesToShow: 2.1,
         },
       },
     ],

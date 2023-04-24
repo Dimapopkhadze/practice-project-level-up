@@ -25,8 +25,12 @@ export const AccordionStyled = styled(Accordion)`
 export const StyledDiv = styled("div")`
   margin: 64px 0 64px 0;
   height: 250px;
+  .slide {
+    margin: 0 10px;
+  }
   .partners__slider {
-    width: 855px;
+    margin: 0 -10px;
+    width: 100%;
     @media (max-width: 600px) {
       width: 100%;
     }

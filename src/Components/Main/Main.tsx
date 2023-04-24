@@ -10,6 +10,7 @@ import { useState } from "react";
 import { TabStyled, TabsStyled, BoxStyled } from "../Styles/MainDialogStyles";
 import FirstPanel from "./PanelComponents/FirstPanel";
 import SecondPanel from "./PanelComponents/SecondPanel";
+import ThirdPanel from "./PanelComponents/ThirdPanel";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -100,7 +101,7 @@ const Main = () => {
         <SecondPanel />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div>dima</div>
+        <ThirdPanel />
       </TabPanel>
     </BoxStyled>
   );

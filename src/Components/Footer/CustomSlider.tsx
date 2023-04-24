@@ -17,7 +17,7 @@ const CustomSlider = (props: propTypes) => {
     <StyledDiv>
       <Slider className="partners__slider" {...props.settings}>
         {props.slides.map((item) => (
-          <div>
+          <div className="slide">
             <img key={item.id} className="img" src={`/img/${item.img}`} />
           </div>
         ))}
