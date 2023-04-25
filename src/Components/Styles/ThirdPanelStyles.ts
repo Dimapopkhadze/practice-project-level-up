@@ -41,7 +41,7 @@ export const PanelLayout = styled("div")`
   }
   .img {
     border-radius: 15px;
-    margin: 15px;
+    margin: 0 15px 15px 15px;
   }
   .h3 {
     font-weight: 800;
@@ -98,6 +98,10 @@ export const PanelContainer = styled(Paper)`
   margin: 3px 3px;
   display: flex;
   flex-direction: column;
+  padding-top: 15px;
+  p {
+    padding-bottom: 15px;
+  }
 `;
 
 export const FlexBox = styled("div")`
@@ -105,6 +109,7 @@ export const FlexBox = styled("div")`
   justify-content: center;
   gap: 15px;
   margin-top: 20px;
+  margin: 0 20px;
 
   @media (max-width: 600px) {
     flex-direction: column;

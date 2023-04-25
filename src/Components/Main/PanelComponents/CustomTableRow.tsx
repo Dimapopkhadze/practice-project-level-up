@@ -15,7 +15,6 @@ interface data {
 
 const CustomTableRow = ({ leaderboard }: data) => {
   const dataType = "voucher" in leaderboard[0];
-  console.log(dataType);
 
   return (
     <Container>
@@ -25,7 +24,7 @@ const CustomTableRow = ({ leaderboard }: data) => {
             <div>ადგილი</div>
             <div className="flex">
               <div>
-                <img src="/img/voucher.png"></img>
+                <img src="/img/voucher.png" alt="voucher"></img>
               </div>
 
               <span>ვაუჩერი</span>
@@ -33,7 +32,7 @@ const CustomTableRow = ({ leaderboard }: data) => {
             <div>პრიზი</div>
           </CustomHeader>
           {leaderboard.map((item) => (
-            <Flex>
+            <Flex key={item.number}>
               <div className="start">
                 <span>{item.number}</span>
               </div>
@@ -46,8 +45,8 @@ const CustomTableRow = ({ leaderboard }: data) => {
       {!dataType && (
         <>
           {leaderboard.map((item) => (
-            <Flex>
-              <div className="start">
+            <Flex className="second-table" key={item.number}>
+              <div>
                 <span>{item.number}</span>
               </div>
               <div>{item.text}</div>

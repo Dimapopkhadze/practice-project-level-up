@@ -1,4 +1,4 @@
-import { Button, useMediaQuery, useTheme, IconButton } from "@mui/material";
+import { useMediaQuery, useTheme, IconButton } from "@mui/material";
 import {
   ButtonStyledLeft,
   ButtonStyledRight,

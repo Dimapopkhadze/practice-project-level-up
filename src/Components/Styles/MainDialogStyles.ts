@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Dialog, Paper, Tab, Tabs, Box, useTheme } from "@mui/material";
+import { Dialog, Paper, Tab, Tabs, Box } from "@mui/material";
 
 export const DialogStyled = styled(Dialog)`
   display: flex;

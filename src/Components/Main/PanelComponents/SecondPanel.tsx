@@ -11,31 +11,26 @@ import {
   FlexBox,
 } from "../../Styles/SecondPanelStyles";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import CustomTable from "./CustomTable";
+
 import { Stack, useMediaQuery, useTheme } from "@mui/material";
 import CustomTableRow from "./CustomTableRow";
-
-type leaderboardData = {
-  number: number;
-  voucher: string;
-  prize: string;
-};
 
 const SecondPanel = () => {
   const theme = useTheme();
   const responsive = useMediaQuery(theme.breakpoints.down("sm"));
-  const leaderboard = [
-    { number: 1, voucher: "-", text: "aasd" },
-    { number: 2, voucher: "-", text: "aasd" },
 
-    { number: 3, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 4, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 5, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 6, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 7, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 8, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 9, voucher: "-", text: "aaadlkasjdlkasjdlka" },
+  const leaderboard = [
+    { number: 1, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 2, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 3, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 4, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 5, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 6, voucher: "1500", text: "A კატეგორიის საგზური" },
+    { number: 7, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 8, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 9, voucher: "-", text: "A კატეგორიის საგზური" },
   ];
+
   return (
     <PanelLayout>
       <PanelComponent className="border-top">
@@ -44,7 +39,7 @@ const SecondPanel = () => {
           <h4>სერიის ფარგლებში, ყოველდღიურად გაიმართება 3 ივენთი:</h4>
           {!responsive && (
             <FlexContainer>
-              <img src="/img/promo-left-img.png"></img>
+              <img src="/img/promo-left-img.png" alt="promo-left"></img>
               <FlexComponent>
                 <Time>
                   <AccessTimeIcon
@@ -64,12 +59,12 @@ const SecondPanel = () => {
 
                 <StyledButton>პოკერის ლობი</StyledButton>
               </FlexComponent>
-              <img src="/img/promo-right-img.png"></img>
+              <img src="/img/promo-right-img.png" alt="promo-right"></img>
             </FlexContainer>
           )}
           {responsive && (
             <FlexContainer>
-              <img src="/img/promo-left-img-m.png"></img>
+              <img src="/img/promo-left-img-m.png" alt="promo-left-m" />
               <Time>
                 <AccessTimeIcon
                   sx={{
@@ -80,7 +75,7 @@ const SecondPanel = () => {
                 />
                 <div>19:00 / 19:30 / 20:00</div>
               </Time>
-              <img src="/img/promo-right-img-m.png"></img>
+              <img src="/img/promo-right-img-m.png" alt="promo-right-m" />
             </FlexContainer>
           )}
         </PanelContainer>
@@ -122,13 +117,13 @@ const SecondPanel = () => {
             >
               <StyledDiv className="border-left">
                 <div>
-                  <img src="/img/travel-icon-sm.png" />
+                  <img src="/img/travel-icon-sm.png" alt="travel" />
                   <p>The Festival in Malta-ს საგზური</p>
                 </div>
               </StyledDiv>
               <StyledDiv className="border-left">
                 <div>
-                  <img src="/img/ticket-icon-sm.png" />
+                  <img src="/img/ticket-icon-sm.png" alt="ticket" />
                   <p>
                     სპეციალური ტურნირის "Cashgame
                     <span> Sharks" ბილეთი, სადაც გათამაშდება</span>
@@ -138,8 +133,8 @@ const SecondPanel = () => {
               </StyledDiv>
               <StyledDiv className="border-left">
                 <div>
-                  <img src="/img/ticket-icon-sm.png" />
-                  <p>The Festival in Malta-ს საგზური</p>
+                  <img src="/img/voucher.png" alt="voucher" />
+                  <p>ტექნიკის მაღაზიის ვაუჩერ</p>
                 </div>
               </StyledDiv>
             </Stack>
@@ -150,7 +145,7 @@ const SecondPanel = () => {
         <PanelContainer>
           <h3>ყოველდღიური ტურნირები და სატელიტები</h3>
           {!responsive && (
-            <FlexBox style={{ margin: "0 10px" }}>
+            <FlexBox>
               <FlexBox className="row">
                 <FlexBox className="background-1">
                   <FlexBox className="row small">

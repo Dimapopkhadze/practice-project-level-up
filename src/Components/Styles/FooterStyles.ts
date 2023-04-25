@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Accordion, Paper } from "@mui/material";
+import { Accordion, Button, Paper } from "@mui/material";
 
 export const FooterContainer = styled("div")`
   margin: 20px 35px;
@@ -72,4 +72,21 @@ export const OfferBox = styled(Paper)`
   }
  
   }
+`;
+export const FooterButton = styled("div")`
+  position: fixed;
+  width: 100%;
+  background: #171718;
+  justify-content: center;
+  border-top: 3px solid #ef5a21;
+  display: flex;
+  bottom: 0;
+`;
+
+export const StyledButton = styled(Button)`
+  background: #ef5a21;
+  color: white;
+  font-weight: bold;
+  padding: 5px 30px;
+  margin: 10px;
 `;

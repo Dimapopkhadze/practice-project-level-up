@@ -1,8 +1,4 @@
-import {
-  AccordionStyled,
-  FooterContainer,
-  StyledDiv,
-} from "../Styles/FooterStyles";
+import { StyledDiv } from "../Styles/FooterStyles";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,8 +13,8 @@ const CustomSlider = (props: propTypes) => {
     <StyledDiv>
       <Slider className="partners__slider" {...props.settings}>
         {props.slides.map((item) => (
-          <div className="slide">
-            <img key={item.id} className="img" src={`/img/${item.img}`} />
+          <div className="slide" key={item.id}>
+            <img className="img" alt="/" src={`/img/${item.img}`} />
           </div>
         ))}
       </Slider>

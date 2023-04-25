@@ -1,11 +1,4 @@
-import {
-  Tabs,
-  Tab,
-  Box,
-  Typography,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material";
+import { Typography, useTheme, useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import { TabStyled, TabsStyled, BoxStyled } from "../Styles/MainDialogStyles";
 import FirstPanel from "./PanelComponents/FirstPanel";

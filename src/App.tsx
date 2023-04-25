@@ -1,4 +1,4 @@
-import { Dialog, useMediaQuery, useTheme, Paper, Box } from "@mui/material";
+import { useMediaQuery, useTheme } from "@mui/material";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";

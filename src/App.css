@@ -5,6 +5,7 @@
   }
   ::-webkit-scrollbar {
     width: 5px;
+ 
   }
 
   ::-webkit-scrollbar-track {
@@ -15,7 +16,11 @@
   ::-webkit-scrollbar-thumb {
     background: #ef5a21;
     border-radius: 10px;
-  
   }
 
-  
+  @media (max-width:600px) {
+    ::-webkit-scrollbar {
+    display: none;
+   
+    }
+  }

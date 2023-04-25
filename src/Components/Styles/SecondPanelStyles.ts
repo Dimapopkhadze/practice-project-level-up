@@ -213,6 +213,7 @@ export const FlexBox = styled("div")`
   align-items: center;
   flex-direction: column;
   gap: 16px;
+  margin: 0 10px;
 `;
 export const Time = styled("div")`
   display: flex;
@@ -227,6 +228,9 @@ export const Time = styled("div")`
     padding: 3px 6px 3px 0;
     font-weight: bold;
     font-size: 15px;
+    @media (max-width: 600px) {
+      font-size: 12px;
+    }
   }
 `;
 export const StyledButton = styled(Button)`

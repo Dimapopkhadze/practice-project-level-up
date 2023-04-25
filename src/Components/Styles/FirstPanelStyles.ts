@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Paper, Table, TableCell, TableHead, Stack } from "@mui/material";
+import { Paper } from "@mui/material";
 
 export const PanelLayout = styled("div")`
   .border-top {
@@ -37,15 +37,21 @@ export const PanelContainer = styled(Paper)`
   background: #171718;
   border-radius: 15px;
   margin: 3px 3px;
+
   padding: 10px;
+  button {
+    border: none;
+    background-color: transparent;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #ef5a21;
+    font-size: 16px;
+  }
   .title-with-icon {
     display: flex;
     justify-content: center;
     gap: 15px;
-  }
-  .link {
-    color: #ef5a21;
-    text-decoration: underline;
   }
 `;
 export const PaperStyled = styled(Paper)`

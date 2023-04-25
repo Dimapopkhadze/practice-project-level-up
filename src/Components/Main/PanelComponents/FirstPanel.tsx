@@ -10,16 +10,15 @@ import CustomTableRow from "./CustomTableRow";
 
 const FirstPanel = () => {
   const leaderboard = [
-    { number: 1, voucher: "-", text: "aasd" },
-    { number: 2, voucher: "-", text: "aasd" },
-
-    { number: 3, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 4, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 5, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 6, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 7, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 8, voucher: "-", text: "aaadlkasjdlkasjdlka" },
-    { number: 9, voucher: "-", text: "aaadlkasjdlkasjdlka" },
+    { number: 1, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 2, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 3, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 4, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 5, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 6, voucher: "1500", text: "A კატეგორიის საგზური" },
+    { number: 7, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 8, voucher: "-", text: "A კატეგორიის საგზური" },
+    { number: 9, voucher: "-", text: "A კატეგორიის საგზური" },
   ];
   return (
     <PanelLayout>
@@ -44,13 +43,13 @@ const FirstPanel = () => {
             >
               <StyledDiv className="border-left">
                 <div>
-                  <img src="/img/travel-icon-sm.png" />
+                  <img src="/img/travel-icon-sm.png" alt="travel" />
                   <p>The Festival in Malta-ს საგზური</p>
                 </div>
               </StyledDiv>
               <StyledDiv className="border-left">
                 <div>
-                  <img src="/img/ticket-icon-sm.png" />
+                  <img src="/img/ticket-icon-sm.png" alt="ticket" />
                   <p>
                     სპეციალური ტურნირის "Cashgame
                     <span> Sharks" ბილეთი, სადაც გათამაშდება</span>
@@ -60,8 +59,8 @@ const FirstPanel = () => {
               </StyledDiv>
               <StyledDiv className="border-left">
                 <div>
-                  <img src="/img/ticket-icon-sm.png" />
-                  <p>The Festival in Malta-ს საგზური</p>
+                  <img src="/img/voucher.png" alt="voucher" />
+                  <p>ტექნიკის მაღაზიის ვაუჩერი</p>
                 </div>
               </StyledDiv>
             </Stack>
@@ -84,13 +83,13 @@ const FirstPanel = () => {
             >
               <StyledDiv className="border-left">
                 <div>
-                  <img src="/img/travel-icon-sm.png" />
+                  <img src="/img/travel-icon-sm.png" alt="travel" />
                   <p>The Festival in Malta-ს საგზური</p>
                 </div>
               </StyledDiv>
               <StyledDiv className="border-left">
                 <div>
-                  <img src="/img/ticket-icon-sm.png" />
+                  <img src="/img/ticket-icon-sm.png" alt="ticket" />
                   <p>
                     სპეციალური ტურნირის "Cashgame Sharks" ბილეთი, სადაც
                     გათამაშდება The Festival in Malta-ს საგზური
@@ -99,17 +98,15 @@ const FirstPanel = () => {
               </StyledDiv>
               <StyledDiv className="border-left">
                 <div>
-                  <img src="/img/ticket-icon-sm.png" />
-                  <p>The Festival in Malta-ს საგზური</p>
+                  <img src="/img/voucher.png" alt="voucher" />
+                  <p>ტექნიკის მაღაზიის ვაუჩერი</p>
                 </div>
               </StyledDiv>
             </Stack>
           </PaperStyled>
           <span>
             {`*ლიდერბორდის შედეგები განახლდება `}
-            <a href="" className="link">
-              პოკერის ლობიში
-            </a>
+            <button>პოკერის ლობიში</button>
           </span>
         </PanelContainer>
       </PanelComponent>
