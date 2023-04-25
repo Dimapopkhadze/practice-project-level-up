@@ -78,12 +78,12 @@ export const CustomHeader = styled("div")`
   justify-content: space-between;
   background: #25292b;
   align-items: center;
-
   padding: 20px 30px;
-
   position: sticky;
   top: 0;
-
+  img {
+    width: 25px;
+  }
   div {
     font-size: 14px;
   }

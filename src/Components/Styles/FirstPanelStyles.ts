@@ -19,6 +19,10 @@ export const PanelLayout = styled("div")`
     border-bottom-right-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(239, 90, 33, 0.4);
   }
+
+  .footer-span {
+    font-size: 13px;
+  }
 `;
 export const PanelComponent = styled(Paper)`
   background: #2c3234;
@@ -28,9 +32,6 @@ export const PanelComponent = styled(Paper)`
   flex-direction: column;
   text-align: center;
   margin-bottom: 20px;
-  .second-component {
-    padding: 10px 35px;
-  }
 `;
 export const PanelContainer = styled(Paper)`
   color: white;
@@ -46,12 +47,14 @@ export const PanelContainer = styled(Paper)`
     text-decoration: underline;
     cursor: pointer;
     color: #ef5a21;
-    font-size: 16px;
+    font-size: 13px;
   }
   .title-with-icon {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin: 15px 10px;
+    font-weight: bold;
   }
 `;
 export const PaperStyled = styled(Paper)`

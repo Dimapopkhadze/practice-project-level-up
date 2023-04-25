@@ -26,7 +26,7 @@ const FirstPanel = () => {
         <h3>1 ₾ რეიკი = 1 ქულას</h3>
         <PanelContainer>
           <div className="title-with-icon">
-            <h3>ჰოლდემის TOP 20 ლიდერბორდი </h3>
+            <div>ჰოლდემის TOP 20 ლიდერბორდი </div>
             <img src="/img/example-icon.png" alt="example-icon"></img>
           </div>
           <PaperStyled>
@@ -66,7 +66,7 @@ const FirstPanel = () => {
             </Stack>
           </PaperStyled>
           <div className="title-with-icon">
-            <h3>TOP 20 ლიდერბორდი ჰოლდემში </h3>
+            <div>TOP 20 ლიდერბორდი ჰოლდემში </div>
             <img src="/img/example-icon.png" alt="example-icon"></img>
           </div>
           <PaperStyled>
@@ -104,17 +104,17 @@ const FirstPanel = () => {
               </StyledDiv>
             </Stack>
           </PaperStyled>
-          <span>
-            {`*ლიდერბორდის შედეგები განახლდება `}
+          <span className="footer-span">
+            {`* ლიდერბორდის შედეგები განახლდება `}
             <button>პოკერის ლობიში</button>
           </span>
         </PanelContainer>
       </PanelComponent>
       <PanelComponent className="border-top">
-        <div className="second-component">
+        <div>
           <h3>
-            დამატებით შედგება, ქეშგეიმის, ტურნიტების და სპინ პოკერის 12 Side
-            ლიდერბორდი
+            დამატებით შედგება, ქეშგეიმის, ტურნიტების და სპინ პოკერის
+            <br /> 12 Side ლიდერბორდი
           </h3>
           <p>
             * Side ლიდერბორდების შესახებ დეტალური ინფორმაცია იხილეთ პოკერის

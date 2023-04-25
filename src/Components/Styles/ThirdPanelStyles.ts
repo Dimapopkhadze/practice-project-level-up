@@ -67,17 +67,29 @@ export const PanelLayout = styled("div")`
     span {
       font-size: 13px;
     }
+
   }
 
   .span {
     margin: 20px 5px;
     font-size: 14px;
   }
+  .table-p{
+    margin-bottom:30px;
+  }
+  .gold-characters{
+   
+    background: linear-gradient(to right, #e4cd91, #e4cd91 , #916a29 ,#e4cd91 );
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent
+  }
   @media (max-width: 600px) {
     .h3 {
       font-weight:200;
       font-size:14px;
-   
+    }
+    .table-p{
+      display:none;
     }
 `;
 
@@ -99,9 +111,6 @@ export const PanelContainer = styled(Paper)`
   display: flex;
   flex-direction: column;
   padding-top: 15px;
-  p {
-    padding-bottom: 15px;
-  }
 `;
 
 export const FlexBox = styled("div")`

@@ -22,7 +22,7 @@ const Main = () => {
   return (
     <BoxStyled>
       <h3>მოიპოვე მრავალფეროვანი პრიზები და 10 საგზურიდან ერთ-ერთი</h3>
-      <p>მოხვდი პოკერის ფესტივალზე მალტაში</p>
+      <p className="p">მოხვდი პოკერის ფესტივალზე მალტაში</p>
       <TabsStyled
         value={value}
         onChange={handleChange}

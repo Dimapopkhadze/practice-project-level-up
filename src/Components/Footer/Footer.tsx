@@ -68,9 +68,6 @@ const Footer = () => {
   return (
     <>
       <FooterContainer>
-        <FooterButton>
-          <div>dima</div>
-        </FooterButton>
         <Box sx={{ marginBottom: "60px" }}>
           <h3>წესები და პირობები</h3>
           <AccordionStyled>

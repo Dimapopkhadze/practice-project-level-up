@@ -7,7 +7,9 @@ export const DialogStyled = styled(Dialog)`
 `;
 export const BoxStyled = styled(Box)`
   margin: 0px 35px;
-
+  .p {
+    margin-bottom: 40px;
+  }
   @media (max-width: 600px) {
     margin: 0px 20px;
   }

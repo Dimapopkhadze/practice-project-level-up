@@ -19,6 +19,23 @@ export const PanelLayout = styled("div")`
     border-bottom-right-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(239, 90, 33, 0.4);
   }
+  .border-left {
+    position: relative;
+  }
+  .border-left::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 25%;
+    bottom: 0;
+    width: 5px;
+    height: 50%;
+    background-color: #ef5a21;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(239, 90, 33, 0.4);
+  }
   .span {
     margin: 20px 5px;
     font-size: 14px;
@@ -50,107 +67,12 @@ export const PanelLayout = styled("div")`
     color: #ef5a21;
     text-decoration: underline;
   }
-  .row {
-    width:100%;
-    flex-direction: row;
-    overflow:hidden;
 
-    white-space:nowrap;
+  .footer-span {
+    font-size: 13px;
+  }
 
-
-  
-  }
-  .background-1 {
-    
-  width:100%;
-    height: 104px;
-    background-image: url("/img/tournament-bg.png");
-    background-repeat:no-repeat;
-  }
-  .background-2 {
-    width:100%;
-    height: 104px;
-    background-repeat:no-repeat;
-    background-image: url("/img/tournament-bg2.png");
-  }
-  .background-3 {
-    width: 100%;
-    height: 104px;
-    background-image: url("/img/main-bg.png");
-  }
-  .small {
-    width: 65%;
-
-    justify-content: space-between;
- 
-  }
-  .big {
-    width: 35%;
-    justify-content: space-between;
-  }
-  .date-small {
-    margin-right: 15px;
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    padding: 3px 10px;
-    background: #b78648;
-  }
-  .date-big {
-    background: #d7c860;
-    margin-right: 15px;
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    padding: 0px 10px;
-  }
-  .prize {
-    color: #ffbe00;
-    font-weight: bold;
-    font-size: 24px;
-  }
-  .border-left {
-    position: relative;
-  }
-  .border-left::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 25%;
-    bottom: 0;
-    width: 5px;
-    height: 50%;
-    background-color: #ef5a21;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0 0 10px 5px rgba(239, 90, 33, 0.4);
-  }
-   
   @media (max-width: 600px) {
-    .background-1-m {
-      width: 343px;
-      height: 85px;
-      display: flex;
-      background-image: url("/img/tournament-bg-m.png");
-    }
-    .background-2-m {
-      width: 343px;
-      height: 85px;
-      background-image: url("/img/main-bg-sm.png");
-    }
-    .small {
-      width: 80%;
-      span {
-        font-size: 16px;
-      }
-      .prize {
-        font-size: 23px;
-      }
-      .date-small{
-        padding
-      }
-    }
   }
 `;
 export const PanelComponent = styled(Paper)`
@@ -161,10 +83,6 @@ export const PanelComponent = styled(Paper)`
   flex-direction: column;
   text-align: center;
   margin-bottom: 20px;
-
-  .second-component {
-    padding: 10px 35px;
-  }
 `;
 
 export const SecondPanelComponent = styled(Paper)`
@@ -184,7 +102,17 @@ export const PanelContainer = styled(Paper)`
   margin: 3px 3px;
   display: flex;
   flex-direction: column;
-
+  padding:10px;
+  button {
+    border: none;
+    background-color: transparent;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #ef5a21;
+    font-size: 13px;
+    padding-bottom:10px;
+  }
   @media (max-width: 600px) {
     h3 {
       font-size: 15px;
@@ -207,13 +135,22 @@ export const FlexComponent = styled("div")`
   }
 }
 `;
-export const FlexBox = styled("div")`
+export const FlexBoxColumn = styled("div")`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 16px;
-  margin: 0 10px;
+  gap: 15px;
+`;
+export const FlexBoxRow = styled("div")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  @media (max-width: 790px) {
+    flex-direction: column;
+  }
 `;
 export const Time = styled("div")`
   display: flex;
@@ -229,7 +166,7 @@ export const Time = styled("div")`
     font-weight: bold;
     font-size: 15px;
     @media (max-width: 600px) {
-      font-size: 12px;
+      font-size: 10px;
     }
   }
 `;

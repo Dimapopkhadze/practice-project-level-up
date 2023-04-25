@@ -8,12 +8,14 @@ import {
   FlexComponent,
   PaperStyled,
   StyledDiv,
-  FlexBox,
+  FlexBoxColumn,
+  FlexBoxRow,
 } from "../../Styles/SecondPanelStyles";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 import { Stack, useMediaQuery, useTheme } from "@mui/material";
 import CustomTableRow from "./CustomTableRow";
+import Banner from "./Banner";
 
 const SecondPanel = () => {
   const theme = useTheme();
@@ -29,6 +31,36 @@ const SecondPanel = () => {
     { number: 7, voucher: "-", text: "A კატეგორიის საგზური" },
     { number: 8, voucher: "-", text: "A კატეგორიის საგზური" },
     { number: 9, voucher: "-", text: "A კატეგორიის საგზური" },
+  ];
+
+  const BannersData = [
+    {
+      text1: "Holdem Highrollers",
+      text2: "ბაი ინი- 550ლ",
+      prize: "50 000 ₾",
+      date: "27 აპრილი",
+      backgroundImg: "/img/tournament-bg.png",
+      backgroundImgMobile: "/img/tournament-bg-m.png",
+      dateColor: { primary: "#b78648", secondary: "white" },
+    },
+    {
+      text1: "Holdem Highrollers",
+      text2: "ბაი ინი- 550ლ",
+      prize: "50 000 ₾",
+      date: "27 აპრილი",
+      backgroundImg: "/img/tournament-bg.png",
+      backgroundImgMobile: "/img/tournament-bg-m.png",
+      dateColor: { primary: "#b78648", secondary: "white" },
+    },
+    {
+      text1: "Holdem Highrollers",
+      text2: "ბაი ინი- 550ლ",
+      prize: "50 000 ₾",
+      date: "27 აპრილი",
+      backgroundImg: "/img/main-bg.png",
+      backgroundImgMobile: "/img/main-bg-sm.png",
+      dateColor: { primary: "#d7c860", secondary: "#094b3d" },
+    },
   ];
 
   return (
@@ -139,81 +171,29 @@ const SecondPanel = () => {
               </StyledDiv>
             </Stack>
           </PaperStyled>
+          <span className="footer-span">
+            {`*ლიდერბორდის შედეგები განახლდება `}
+            <button>პოკერის ლობიში</button>
+          </span>
+          <span className="footer-span">
+            * სატურნირო ლიდერბორდის ქულების დათვლაში არ მონაწილეობს ფრიროლები და
+            სატელიტები
+          </span>
         </PanelContainer>
       </PanelComponent>
       <PanelComponent>
         <PanelContainer>
           <h3>ყოველდღიური ტურნირები და სატელიტები</h3>
-          {!responsive && (
-            <FlexBox>
-              <FlexBox className="row">
-                <FlexBox className="background-1">
-                  <FlexBox className="row small">
-                    <span>Holdem Highrollers</span>
-                    <span>ბაი-ინი - 550 ₾</span>
-                  </FlexBox>
-                  <FlexBox className="row small">
-                    <span className="prize">50 000 ₾</span>
-                    <span className="date-small">27 აპრილი</span>
-                  </FlexBox>
-                </FlexBox>
-                <FlexBox className="background-2">
-                  <FlexBox className="row small">
-                    <span>Omaha Highrollers</span>
-                    <span>ბაი-ინი - 550 ₾</span>
-                  </FlexBox>
-                  <FlexBox className="row small">
-                    <span className="prize">50 000 ₾</span>
-                    <span className="date-small">27 აპრილი</span>
-                  </FlexBox>
-                </FlexBox>
-              </FlexBox>
-              <FlexBox className="background-3">
-                <FlexBox className="row big">
-                  <span>Main Events</span>
-                  <span>ბაი-ინი - 550 ₾</span>
-                </FlexBox>
-                <FlexBox className="row big">
-                  <span className="prize">150 000 ₾</span>
-                  <span className="date-big">27 აპრილი</span>
-                </FlexBox>
-              </FlexBox>
-            </FlexBox>
-          )}
-          {responsive && (
-            <FlexBox>
-              <FlexBox className="background-1-m">
-                <FlexBox className="row small">
-                  <span>Omaha Highrollers</span>
-                  <span>ბაი-ინი - XXX₾</span>
-                </FlexBox>
-                <FlexBox className="row small">
-                  <span className="prize">40 000 ₾</span>
-                  <span className="date-small">27 დეკემბერი</span>
-                </FlexBox>
-              </FlexBox>
-              <FlexBox className="background-1-m">
-                <FlexBox className="row small">
-                  <span>Omaha Highrollers</span>
-                  <span>ბაი-ინი - XXX₾</span>
-                </FlexBox>
-                <FlexBox className="row small">
-                  <span className="prize">40 000 ₾</span>
-                  <span className="date-small">27 დეკემბერი</span>
-                </FlexBox>
-              </FlexBox>
-              <FlexBox className="background-2-m">
-                <FlexBox className="row small">
-                  <span>Omaha Highrollers</span>
-                  <span>ბაი-ინი - XXX₾</span>
-                </FlexBox>
-                <FlexBox className="row small">
-                  <span className="prize">40 000 ₾</span>
-                  <span className="date-small">27 დეკემბერი</span>
-                </FlexBox>
-              </FlexBox>
-            </FlexBox>
-          )}
+
+          <FlexBoxColumn>
+            <FlexBoxRow>
+              {BannersData.slice(0, 2).map((bannerObject, index) => {
+                return <Banner key={index} info={bannerObject} />;
+              })}
+            </FlexBoxRow>
+            <Banner isBigBanner info={BannersData[2]} />
+          </FlexBoxColumn>
+
           <span className="span">
             * სამივე ტურნირის გამარჯვებულები მიიღებენ ბეჭდებს და ფინალურ ეტაპზე,
             The
@@ -225,10 +205,10 @@ const SecondPanel = () => {
       </PanelComponent>
 
       <PanelComponent className="border-top">
-        <div className="second-component">
+        <div>
           <h3>
-            დამატებით შედგება, ქეშგეიმის, ტურნიტების და სპინ პოკერის 12 Side
-            ლიდერბორდი
+            დამატებით შედგება, ქეშგეიმის, ტურნიტების და სპინ პოკერის <br />
+            12 Side ლიდერბორდი
           </h3>
           <p>
             * Side ლიდერბორდების შესახებ დეტალური ინფორმაცია იხილეთ პოკერის

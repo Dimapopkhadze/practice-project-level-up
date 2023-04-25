@@ -223,9 +223,13 @@ const ThirdPanel = () => {
       </PanelComponent>
 
       <PanelComponent>
-        <h3>მისტიური გასაღები</h3>
+        <FlexBox style={{ flexDirection: "row" }}>
+          <img src="/img/key.png" alt="key" />
+          <h3 className="gold-characters">მისტიური გასაღები</h3>
+        </FlexBox>
+
         <PanelContainer>
-          <p>
+          <p className="table-p">
             მოთამაშეები გარკვეული საპრიზო ადგილების დაკავების შემთხვევაში
             მიიღებემ საიდუმლო გასაღებს
           </p>
